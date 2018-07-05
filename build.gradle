@@ -67,8 +67,6 @@ subprojects {
         }
     }
 
-    apply plugin: 'de.undercouch.download'
-
     ext.makeNdkTasks = { name, deps ->
         task "ndk_build_${name}"(dependsOn: deps, type: Exec) {
             inputs.file("src/main/jni/${name}")
